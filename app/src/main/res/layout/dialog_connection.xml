@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llAlertDailog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tinyPadding"
+        android:layout_marginRight="@dimen/tinyPadding"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/tinyPadding">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/tinyPadding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_noconnection"
+                    android:tint="@color/colorPrimary" />
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mediumPadding"
+                    android:gravity="center"
+                    android:text="No internet Connection"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/normalSize"
+                    app:custom_font="novecentosanswide_medium" />
+
+            </LinearLayout>
+
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:id="@+id/tvSecondaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tinyPadding"
+                android:layout_marginRight="@dimen/tinyPadding"
+                android:layout_marginTop="@dimen/smallPadding"
+                android:gravity="center"
+                android:text="@string/turn_on_mobile_or_wifi_connection_nfor_check_available_update_list"
+                android:textColor="@color/gray"
+                app:custom_font="novecentosanswide_normal" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/smallPadding"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/smallPadding">
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:id="@+id/tvbtnOK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/smallPadding"
+                    android:paddingLeft="@dimen/mediumPadding"
+                    android:paddingRight="@dimen/mediumPadding"
+                    android:paddingTop="@dimen/smallPadding"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/largeSize"
+                    android:textStyle="bold"
+                    app:custom_font="novecentosanswide_medium" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

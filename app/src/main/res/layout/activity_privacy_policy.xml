@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp">
+        <!-- -->
+
+        <LinearLayout
+
+            android:id="@+id/llBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/miniPadding"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:padding="@dimen/mediumPadding"
+                android:id="@+id/ivHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <com.gonext.callreminder.utils.view.CustomTextView
+            android:layout_width="wrap_content"
+            android:text="Privacy Policy"
+            android:textSize="@dimen/largeSize"
+            app:custom_font="novecentosanswide_book"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <WebView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/wbPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

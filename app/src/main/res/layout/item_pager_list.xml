@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    >
+    <com.gonext.callreminder.utils.view.CustomEditText
+        android:id="@+id/edtNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:maxLines="4"
+        android:textSize="@dimen/normalSize"
+        android:isScrollContainer="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:textColor="@color/colorPrimary"
+        app:custom_font="novecentosanswide_medium"
+        android:backgroundTint="@color/transparent"
+        />
+</LinearLayout>

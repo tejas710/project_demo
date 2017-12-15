@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gonext.callreminder.activities.HistoryActivity"
+    tools:showIn="@layout/activity_history">
+    <com.gonext.callreminder.utils.view.CustomRecyclerView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rlAds"
+        android:id="@+id/rvHistoryReminder"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_height="match_parent">
+
+    </com.gonext.callreminder.utils.view.CustomRecyclerView>
+    <include layout="@layout/layout_recycler_emptyview"/>
+    <include
+        layout="@layout/layout_banner_ads"></include>
+</RelativeLayout>

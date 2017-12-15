@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gonext.callreminder.activities.AfterCallWindowActivity"
+    tools:showIn="@layout/activity_after_call_window">
+    <ScrollView
+        android:layout_above="@+id/rlAds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/llAfterCallWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tinyPadding">
+
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvAfterCallWindowTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_toLeftOf="@+id/switchAfterCall"
+                                android:text="@string/after_call_window"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/largeSize"
+                                app:custom_font="novecentosanswide_book"
+                                android:visibility="visible" />
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvAfterWindowCallText"
+                                android:layout_below="@+id/tvAfterCallWindowTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/switchAfterCall"
+
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_marginTop="@dimen/microPadding"
+                                android:text="@string/show_after_call_window_at_the_end_of_call"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/normalSize"
+                                android:visibility="visible" />
+                            <Switch
+                                android:layout_marginRight="@dimen/tinyPadding"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:id="@+id/switchAfterCall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/llAfterCallType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            app:custom_font="novecentosanswide_book"
+                            android:text="@string/after_call_window_type"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/largeSize"
+                            android:visibility="visible" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvChooseType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            android:layout_marginTop="@dimen/microPadding"
+                            android:text="@string/choose_when_to_show_after_call_window"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/normalSize"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/llAfterCallDismissWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            app:custom_font="novecentosanswide_book"
+                            android:text="@string/dismiss_after_call_window"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/largeSize"
+                            android:visibility="visible" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvDismissText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+
+                            android:layout_marginTop="@dimen/microPadding"
+                            android:text="@string/auto_dismiss_after_call_window"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/normalSize"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/llShowOverLockScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tinyPadding">
+
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvShowOnLockScreen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_toLeftOf="@+id/cbShowOnLockScreen"
+                                android:text="@string/show_on_lock_screen"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/largeSize"
+                                app:custom_font="novecentosanswide_book"
+                                android:visibility="visible" />
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvVibrationText"
+                                android:layout_below="@+id/tvShowOnLockScreen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/cbShowOnLockScreen"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_marginTop="@dimen/microPadding"
+                                android:text="@string/show_after_call_window_over_lock_screen"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/normalSize"
+                                android:visibility="visible" />
+                            <CheckBox
+                                android:buttonTint="@color/colorPrimary"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:id="@+id/cbShowOnLockScreen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        layout="@layout/layout_banner_ads"></include>
+</RelativeLayout>

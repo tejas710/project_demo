@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/smallPadding"
+        app:cardMaxElevation="@dimen/smallPadding">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llapp"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/smallPadding"
+                android:paddingBottom="@dimen/smallPadding"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher" />
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mediumPadding"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/largeSize"
+                    />
+            </LinearLayout>
+
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:id="@+id/tvtextofpermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llapp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/mediumPadding"
+                android:layout_marginBottom="@dimen/mediumPadding"
+                android:padding="@dimen/mediumPadding"
+                app:custom_font="novecentosanswide_medium"
+                android:text="@string/storage_permission_is_require_to_use_this_application"
+                android:textColor="@color/gray"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvtextofpermission"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:id="@+id/tvskipbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/smallPadding"
+                    android:paddingLeft="@dimen/largePadding"
+                    android:paddingRight="@dimen/largePadding"
+                    android:paddingTop="@dimen/smallPadding"
+                    android:text="Skip"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/largeSize"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/smallPadding"
+                    app:cardUseCompatPadding="true">
+
+                    <com.gonext.callreminder.utils.view.CustomTextView
+                        android:id="@+id/tvAllowbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingBottom="@dimen/smallPadding"
+                        android:paddingLeft="@dimen/largePadding"
+                        android:paddingRight="@dimen/largePadding"
+                        android:paddingTop="@dimen/smallPadding"
+                        android:text="Allow"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/largeSize"
+                         />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

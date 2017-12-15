@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/tinyPadding"
+        android:orientation="vertical"
+        app:contentPadding="@dimen/mediumPadding"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/smallPadding"
+        app:cardElevation="@dimen/tinyPadding">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/mediumPadding"
+            android:padding="@dimen/mediumPadding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:id="@+id/tvTitle"
+                android:padding="@dimen/mediumPadding"
+                android:textSize="@dimen/largeSize"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/display_length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_below="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/llSnoozeDuration"
+                android:layout_marginRight="@dimen/mediumPadding"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginTop="@dimen/mediumPadding"
+                android:gravity="end|center_horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rgLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RadioButton
+                        android:padding="@dimen/mediumPadding"
+                        android:id="@+id/rb10sec"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/display_for_10_seconds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:padding="@dimen/mediumPadding"
+                        android:id="@+id/rb20sec"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/display_for_20_seconds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:padding="@dimen/mediumPadding"
+                        android:id="@+id/rb30sec"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/display_for_30_seconds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:checked="true"
+                        android:padding="@dimen/mediumPadding"
+                        android:id="@+id/rbCallDuration"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/duration_of_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/llSnoozeDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/mediumPadding"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginTop="@dimen/mediumPadding"
+                android:gravity="end|center_horizontal">
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xxlargePadding"
+                    android:layout_marginTop="@dimen/microPadding"
+                    android:layout_marginRight="@dimen/normalPadding"
+                    android:text="@string/cancel"
+                    android:padding="@dimen/extraMediumPadding"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/extraMediumSize"
+                    />
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:id="@+id/tvOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/microPadding"
+                    android:padding="@dimen/extraMediumPadding"
+                    android:text="@string/ok"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/extraMediumSize"
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

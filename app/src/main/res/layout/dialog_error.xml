@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/tinyPadding"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/smallPadding"
+    app:cardElevation="@dimen/tinyPadding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+        <com.gonext.callreminder.utils.view.CustomTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/xxlargePadding"
+            android:paddingLeft="@dimen/tinyPadding"
+            android:paddingRight="@dimen/tinyPadding"
+            app:letter_spacing="0.15dp"
+            android:text=""
+            app:custom_font="novecentosanswide_book"
+            android:paddingTop="@dimen/normalPadding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalSize" />
+        <RelativeLayout
+            android:id="@+id/rlActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tinyPadding">
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:id="@+id/tvOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/smallPadding"
+                android:layout_marginRight="@dimen/mediumPadding"
+                android:text="@string/cancel"
+                app:custom_font="novecentosanswide_normal"
+                android:textColor="@color/colorPrimary"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

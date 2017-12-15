@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_card_bg"
+    tools:context="com.gonext.callreminder.activities.AddReminderActivity">
+    <RelativeLayout
+        android:layout_above="@+id/rlAds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/largestPadding">
+            <ImageView
+                android:padding="@dimen/smallPadding"
+                android:id="@+id/ivHome"
+                android:layout_marginLeft="@dimen/normalPadding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_back"
+                android:visibility="visible" />
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Edit"
+                android:id="@+id/tvEdit"
+                android:paddingRight="@dimen/smallPadding"
+                android:paddingLeft="@dimen/smallPadding"
+                android:gravity="center"
+                app:custom_font="novecentosanswide_bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="@dimen/largePadding"/>
+        </RelativeLayout>
+
+        <include layout="@layout/content_add_reminder" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@drawable/ic_check" />
+    </RelativeLayout>
+    <include layout="@layout/layout_banner_ads"/>
+
+</RelativeLayout>

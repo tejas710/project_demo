@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlAdLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/smallestPadding"
+    android:layout_marginRight="@dimen/smallestPadding"
+    android:background="@color/transparent"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/rlPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/addPrivacy"
+            android:layout_toStartOf="@+id/addPrivacy"
+            android:text="@string/ads_by_adtorque"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:src="@drawable/ic_addprivacy"
+            android:id="@+id/addPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/smallPadding" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPolicy"
+        android:layout_marginLeft="@dimen/microPadding"
+        android:layout_marginRight="@dimen/microPadding"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llHorizontal1"
+            style="@style/serverAdsLLHorizontalStyle">
+
+            <LinearLayout
+                android:id="@+id/llAds1"
+                style="@style/serverAdsLLSubVerticalStyle">
+
+                <ImageView
+                    android:id="@+id/ivAds1"
+                    style="@style/serverAdsIconStyle" />
+
+                <TextView
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:id="@+id/tvAds1"
+                    style="@style/serverAdsTextStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAds2"
+                style="@style/serverAdsLLSubVerticalStyle">
+
+                <ImageView
+                    android:id="@+id/ivAds2"
+                    style="@style/serverAdsIconStyle" />
+
+                <TextView
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:id="@+id/tvAds2"
+                    style="@style/serverAdsTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHorizontal2"
+            style="@style/serverAdsLLHorizontalStyle">
+
+            <LinearLayout
+                android:id="@+id/llAds3"
+                style="@style/serverAdsLLSubVerticalStyle">
+
+                <ImageView
+                    android:id="@+id/ivAds3"
+                    style="@style/serverAdsIconStyle" />
+
+                <TextView
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:id="@+id/tvAds3"
+                    style="@style/serverAdsTextStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAds4"
+                style="@style/serverAdsLLSubVerticalStyle">
+
+                <ImageView
+                    android:id="@+id/ivAds4"
+                    style="@style/serverAdsIconStyle" />
+
+                <TextView
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:id="@+id/tvAds4"
+                    style="@style/serverAdsTextStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

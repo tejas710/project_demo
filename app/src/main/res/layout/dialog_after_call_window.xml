@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/card">
+
+        <RelativeLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/largePadding"
+            >
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="@dimen/largePadding">
+
+                    <ImageView
+                        android:id="@+id/ivClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/normalPadding"
+                        android:src="@drawable/ic_close" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/mediumPadding"
+                    android:layout_marginLeft="@dimen/largePadding"
+                    android:layout_marginRight="@dimen/largePadding"
+                    android:layout_marginTop="@dimen/largestPadding">
+
+                    <LinearLayout
+                        android:id="@+id/llProfilePhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/miniPadding"
+                        android:background="@drawable/drawable_weekroundbutton"
+                        android:padding="@dimen/miniPadding">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:cardCornerRadius="25dp">
+
+                            <ImageView
+                                android:id="@+id/ivProfilePhoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_profile" />
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/miniPadding"
+                        android:layout_toRightOf="@+id/llProfilePhoto"
+                        android:orientation="vertical">
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/miniPadding"
+                            android:layout_toRightOf="@+id/ivProfilePhoto"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/largeSize" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_toRightOf="@+id/ivProfilePhoto"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/mediumSize" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@+id/llReminderType"
+                    android:layout_marginLeft="@dimen/largerPadding"
+                    android:layout_marginRight="@dimen/largerPadding"
+                    android:layout_marginTop="@dimen/mediumPadding"
+                    android:background="@color/color_card_bg" />
+
+                <LinearLayout
+                    android:id="@+id/llReminderType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlTop"
+                    android:layout_marginBottom="@dimen/smallPadding"
+                    android:layout_marginLeft="@dimen/largePadding"
+                    android:layout_marginRight="@dimen/largePadding"
+                    android:layout_marginTop="@dimen/mediumPadding"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/extraMediumPadding">
+
+                    <LinearLayout
+                        android:id="@+id/llCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivCallReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/miniPadding"
+                            android:src="@drawable/imgcallhome" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvCallReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/miniPadding"
+                            android:text="Call\n"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/mediumSize"
+                            app:custom_font="novecentosanswide_medium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCallNote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivCallNote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/miniPadding"
+                            android:src="@drawable/imgcallnotehome" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvCallNote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/miniPadding"
+                            android:gravity="center"
+                            android:text="Call\nNote"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/mediumSize"
+                            app:custom_font="novecentosanswide_medium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivmSmsReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/miniPadding"
+                            android:src="@drawable/imgsmshome" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvSmsReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/miniPadding"
+                            android:text="Sms\n"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/mediumSize"
+                            app:custom_font="novecentosanswide_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivEmailReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="3dp"
+                            android:src="@drawable/imgemailhome" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvEmailReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/miniPadding"
+                            android:text="Email\n"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/mediumSize"
+                            app:custom_font="novecentosanswide_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivOtherReminder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="3dp"
+                            android:src="@drawable/imgotherhome" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/miniPadding"
+                            android:gravity="center"
+                            android:text="Other\nNote"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/mediumSize"
+                            app:custom_font="novecentosanswide_medium" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llMain"
+            android:visibility="gone">
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

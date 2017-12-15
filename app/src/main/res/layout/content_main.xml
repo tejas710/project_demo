@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlCallPager"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rlAds"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/rlCallTab"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tlCallReminder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarThumbHorizontal="@color/white"
+                android:scrollbars="horizontal"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="fixed"
+                app:tabPaddingStart="@dimen/mediumPadding"
+                app:tabPaddingEnd="@dimen/mediumPadding"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextColor="@color/grayLight" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpCallReminder"
+            android:layout_width="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        </android.support.v4.view.ViewPager>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="@color/colorPrimary"
+            android:tint="@color/white"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </RelativeLayout>
+    <include
+        layout="@layout/layout_banner_ads"></include>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llEmptyViewMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivEmptyImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:tint="@color/colorPrimary"
+        android:scaleType="centerInside"
+        android:src="@drawable/icn_no_connection"/>
+
+    <com.gonext.callreminder.utils.view.CustomTextView
+        android:id="@+id/tvEmptyTitle"
+        style="@style/recyclerview_empty_text"
+        android:padding="@dimen/smallPadding"
+        android:textSize="@dimen/normalSize"
+        app:custom_font="novecentosanswide_book"
+        android:visibility="gone"/>
+
+    <com.gonext.callreminder.utils.view.CustomButton
+        android:id="@+id/btnEmpty"
+        style="@style/recyclerview_empty_button"
+        android:layout_margin="@dimen/smallPadding"
+        android:textSize="@dimen/mediumSize"
+        android:visibility="gone"/>
+
+    <com.gonext.callreminder.utils.view.CustomTextView
+        android:id="@+id/tvEmptyDescription"
+        style="@style/recyclerview_empty_text"
+        android:textSize="@dimen/mediumSize"
+        android:visibility="gone" />
+
+</LinearLayout>

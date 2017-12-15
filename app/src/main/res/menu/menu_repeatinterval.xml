@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_DoNotRepeat"
+        android:title="Do Not Repeat" />
+    <item
+        android:id="@+id/menu_Daily"
+        android:title="Daily" />
+    <item
+        android:id="@+id/menu_DayOfWeek"
+        android:title="Days of week" />
+    <item
+        android:id="@+id/menu_Weekly"
+        android:title="Weekly" />
+    <item
+        android:id="@+id/menu_Monthly"
+        android:title="Monthly" />
+    <item
+        android:id="@+id/menu_Yearly"
+        android:title="Yearly" />
+</menu>

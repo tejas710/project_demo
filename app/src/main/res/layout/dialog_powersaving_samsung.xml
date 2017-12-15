@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/tinyPadding"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/smallPadding"
+    app:cardElevation="@dimen/tinyPadding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <com.gonext.callreminder.utils.view.CustomTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tinyPadding"
+            app:custom_font="novecentosanswide_book"
+            app:letter_spacing="0.15dp"
+            android:text="@string/InfoPowerSavingMode"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/extraMediumSize" />
+
+        <com.gonext.callreminder.utils.view.CustomTextView
+            android:id="@+id/tvMsg"
+            app:custom_font="novecentosanswide_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/xxlargePadding"
+            android:paddingLeft="@dimen/tinyPadding"
+            android:paddingRight="@dimen/tinyPadding"
+            app:letter_spacing="0.15dp"
+            android:paddingTop="@dimen/normalPadding"
+            android:text="@string/infoSamsungMarshmallw"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/normalSize" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlRateButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tinyPadding">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switchDonotShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingLeft="@dimen/smallPadding"
+                    android:textColor="@android:color/black"
+                    app:switchMinWidth="@dimen/largestPadding"
+                    app:theme="@style/BrandedSwitch.control" />
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="Don't show again"
+                    android:textColor="@color/gray"
+                    android:paddingLeft="@dimen/tinyPadding"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.gonext.callreminder.utils.view.CustomTextView
+                android:id="@+id/tvOk"
+                style="@style/DialogOptionsBtnStyle"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/smallPadding"
+                android:layout_centerVertical="true"
+                android:text="@string/ok"
+                android:textSize="@dimen/normalSize"
+                android:paddingRight="@dimen/normalPadding"
+                android:textColor="@color/colorPrimary"
+                 />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

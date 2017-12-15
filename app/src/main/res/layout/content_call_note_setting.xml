@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.gonext.callreminder.activities.CallNoteSettingActivity"
+    tools:showIn="@layout/activity_call_note_setting">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/rlAds"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/llIncomingCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tinyPadding">
+
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvIncomingCall"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_toLeftOf="@+id/switchIncomingCalls"
+                                android:text="@string/incoming_calls"
+                                app:custom_font="novecentosanswide_book"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/largeSize"
+                                android:visibility="visible" />
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvInComingCallText"
+                                android:layout_below="@+id/tvIncomingCall"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/switchIncomingCalls"
+
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_marginTop="@dimen/microPadding"
+                                android:text="@string/display_contact_notes_on_incoming_calls"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/normalSize"
+                                android:visibility="visible" />
+                            <Switch
+                                android:layout_marginRight="@dimen/tinyPadding"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:id="@+id/switchIncomingCalls"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/llOutgoingCalls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tinyPadding">
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvOutgoingCall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            android:layout_toLeftOf="@+id/switchOutgoingCalls"
+                            android:text="@string/outgoing_calls"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/largeSize"
+                            app:custom_font="novecentosanswide_book"
+                            android:visibility="visible" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvOutgoingCallText"
+                            android:layout_below="@+id/tvOutgoingCall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/switchOutgoingCalls"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            android:layout_marginTop="@dimen/microPadding"
+                            android:text="@string/display_contact_notes_on_outgoing_calls"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/normalSize"
+                            android:visibility="visible" />
+                        <Switch
+                            android:layout_marginRight="@dimen/tinyPadding"
+                            android:layout_centerVertical="true"
+                            android:checked="true"
+                            android:id="@+id/switchOutgoingCalls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/llAfterCallDismissWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            app:custom_font="novecentosanswide_book"
+                            android:text="@string/display_length"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/largeSize"
+                            android:visibility="visible" />
+
+                        <com.gonext.callreminder.utils.view.CustomTextView
+                            android:id="@+id/tvDismissText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/largePadding"
+                            android:layout_marginTop="@dimen/microPadding"
+                            android:text="@string/amount_of_time_display_notes"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/normalSize"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/llSpeakerOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/miniPadding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normalPadding">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/tinyPadding">
+
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvSpeakerPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_toLeftOf="@+id/cbSpeakerPhone"
+                                android:text="@string/speakerphone"
+                                app:custom_font="novecentosanswide_book"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/largeSize"
+                                android:visibility="visible" />
+
+                            <com.gonext.callreminder.utils.view.CustomTextView
+                                android:id="@+id/tvSpeakerPhoneText"
+                                android:layout_below="@+id/tvSpeakerPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/cbSpeakerPhone"
+                                android:layout_marginLeft="@dimen/largePadding"
+                                android:layout_marginTop="@dimen/microPadding"
+                                android:text="@string/turn_on_speakerphone_when_edit_call_note"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/normalSize"
+                                android:visibility="visible" />
+                            <CheckBox
+                                android:buttonTint="@color/colorPrimary"
+                                android:layout_centerVertical="true"
+                                android:checked="true"
+                                android:id="@+id/cbSpeakerPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        layout="@layout/layout_banner_ads"></include>
+</RelativeLayout>

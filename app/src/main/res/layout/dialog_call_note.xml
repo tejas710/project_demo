@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/card">
+
+        <RelativeLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/largerPadding">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="@dimen/largePadding">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/normalPadding"
+                    android:src="@drawable/ic_close" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/miniPadding"
+                android:layout_marginLeft="@dimen/largePadding"
+                android:layout_marginRight="@dimen/largePadding"
+                android:layout_marginTop="@dimen/largePadding">
+
+                <LinearLayout
+                    android:id="@+id/llProfilePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/miniPadding"
+                    android:background="@drawable/drawable_weekroundbutton"
+                    android:padding="@dimen/miniPadding">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:id="@+id/ivProfilePhoto"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_profile" />
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mediumPadding"
+                    android:layout_toRightOf="@+id/llProfilePhoto"
+                    android:orientation="vertical">
+
+                    <com.gonext.callreminder.utils.view.CustomTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/miniPadding"
+                        android:layout_marginLeft="@dimen/miniPadding"
+                        android:layout_toRightOf="@+id/ivProfilePhoto"
+                        android:singleLine="true"
+                        android:text="Tejas vora"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/normalSize"
+                        app:custom_font="novecentosanswide_medium" />
+
+                    <com.gonext.callreminder.utils.view.CustomTextView
+                        android:id="@+id/tvNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/miniPadding"
+                        android:layout_toRightOf="@+id/ivProfilePhoto"
+                        android:singleLine="true"
+                        android:text="+9173050455"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/smallSize"
+                        app:custom_font="novecentosanswide_normal" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/llReminderType"
+                android:layout_marginLeft="@dimen/largerPadding"
+                android:layout_marginRight="@dimen/largerPadding"
+                android:layout_marginTop="@dimen/mediumPadding"
+                android:background="@color/color_card_bg" />
+
+            <LinearLayout
+                android:id="@+id/llReminderType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTop"
+                android:layout_marginLeft="@dimen/largePadding"
+                android:layout_marginRight="@dimen/largePadding"
+                android:orientation="vertical">
+
+                <com.gonext.callreminder.utils.view.CustomTextView
+                    android:id="@+id/tvAddNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/mediumPadding"
+                    android:layout_marginTop="@dimen/microPadding"
+                    android:background="@color/black"
+                    android:padding="@dimen/microPadding"
+                    android:text="Add New"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vpCallNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                </android.support.v4.view.ViewPager>
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/largePadding"
+                    android:src="@drawable/ic_edit" />
+
+                <LinearLayout
+                    android:id="@+id/indicator_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/largePadding"
+                    android:layout_marginRight="@dimen/largePadding"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/miniPadding" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llMain"
+            android:visibility="gone">
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
